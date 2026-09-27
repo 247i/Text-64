@@ -1,0 +1,80 @@
+# espanso match file
+
+
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  - trigger: ":tace"
+    replace: "தமிழ் நேரம்!"
+
+  - trigger: ":br"
+    replace: "அன்புடன்,\nதமிழ் நேரம்"
+
+  - trigger: ":now"
+    replace: "மணி {{mytime}}"
+    vars:
+      - name: mytime
+        type: date
+        params:
+          format: "%H:%M"
+
+
+  - trigger: ":today"
+    replace: "{{mytime}}"
+    vars:
+      - name: mytime
+        type: date
+        params:
+          format: "%Y-%m-%d"
+
+
+  - trigger: ":tomorrow"
+    replace: "{{mytime}}"
+    label: "நாளைய தேதியைச் செருக, எ.கா. 2024-01-15"
+    vars:
+      - name: mytime
+        type: date
+        params:
+          format: "%Y-%m-%d"
+          offset: 86400
+
+  - trigger: ":yesterday"
+    replace: "{{mytime}}"
+    label: "நேற்றைய தேதியைச் செருக, எ.கா 2024-01-15"
+    vars:
+      - name: mytime
+        type: date
+        params:
+          format: "%Y-%m-%d"
+          offset: -86400
+
+  - trigger: ":kural"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: random
+        params:
+          choices:
+            - "Every moment is a fresh beginning."
+            - "Everything you can imagine is real."
+            - "Whatever you do, do it well."
+
+
+  - trigger: ":ip"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "curl 'https://api.ipify.org'"
+
+
+  - trigger: ":local"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "ip a | grep 'inet 192' | awk '{ print $2 }'"
+          trim: true

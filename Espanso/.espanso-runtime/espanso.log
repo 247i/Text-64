@@ -1,0 +1,23 @@
+22:16:45 [daemon(15964)] [INFO] reading configs from: "D:\\Espanso\\.espanso"
+22:16:45 [daemon(15964)] [INFO] reading packages from: "D:\\Espanso\\.espanso\\match\\packages"
+22:16:45 [daemon(15964)] [INFO] using runtime dir: "D:\\Espanso\\.espanso-runtime"
+22:16:45 [daemon(15964)] [INFO] system info: Windows v10 (22631) - kernel: 22631
+22:16:45 [daemon(15964)] [INFO] watching for changes in path: "D:\\Espanso\\.espanso"
+22:16:45 [daemon(15964)] [INFO] espanso version: 2.1.8
+22:16:45 [daemon(15964)] [INFO] spawning the worker process...
+22:16:45 [daemon(15964)] [INFO] binded to named pipe: \\.\pipe\espansodaemonv2
+22:16:45 [worker(24624)] [INFO] reading configs from: "D:\\Espanso\\.espanso"
+22:16:45 [worker(24624)] [INFO] reading packages from: "D:\\Espanso\\.espanso\\match\\packages"
+22:16:45 [worker(24624)] [INFO] using runtime dir: "D:\\Espanso\\.espanso-runtime"
+22:16:45 [worker(24624)] [INFO] system info: Windows v10 (22631) - kernel: 22631
+22:16:45 [worker(24624)] [INFO] binded to named pipe: \\.\pipe\espansoworkerv2
+22:16:45 [worker(24624)] [INFO] using Win32AppInfoProvider
+22:16:45 [worker(24624)] [INFO] monitoring the status of the daemon process
+22:16:45 [worker(24624)] [INFO] using Win32Source
+22:16:45 [worker(24624)] [INFO] using Win32Injector
+22:16:45 [worker(24624)] [INFO] using Win32Clipboard
+22:16:47 [worker(24624)] [WARN] unable to find espanso AppUserModelID in the list of registered ones, falling back to Powershell
+22:17:41 [worker(24624)] [INFO] engine eventloop has terminated, propagating exit event...
+22:17:41 [worker(24624)] [INFO] waiting for engine exit mode...
+22:17:41 [worker(24624)] [INFO] exiting worker process and daemon...
+22:17:41 [daemon(15964)] [INFO] worker requested a general exit, quitting the daemon
